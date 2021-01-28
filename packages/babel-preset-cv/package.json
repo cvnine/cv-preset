@@ -1,0 +1,30 @@
+{
+  "name": "babel-preset-cv",
+  "version": "1.0.0",
+  "description": "Common babel preset",
+  "license": "MIT",
+  "repository": {
+	  "type": "git",
+	  "url": "https://github.com/cvnine/cv-preset.git",
+	  "directory": "packages/babel-preset-cv"
+  },
+  "bugs": {
+	  "url": "https://github.com/cvnine/cv-preset/issues"
+  },
+  "keywords": [
+	  "babel",
+	  "preset"
+  ],
+  "dependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/plugin-proposal-decorators": "^7.12.12",
+    "@babel/plugin-proposal-object-rest-spread": "^7.12.1",
+    "@babel/plugin-proposal-optional-chaining": "^7.12.7",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-react": "^7.12.10",
+    "@babel/preset-typescript": "^7.12.7"
+  }
+}
