@@ -1,9 +1,17 @@
 module.exports = function (api, opts) {
-	const { typescript = true, react = true } = opts
+	const {
+		typescript = true,
+		react = true,
+		envOpt = {
+			useBuiltIns: 'entry',
+			corejs: 3,
+		},
+		runtimeOpt = { "corejs": 3 }
+	} = opts
 
 	return {
 		"presets": [
-			"@babel/preset-env",
+			["@babel/preset-env", envOpt],
 			typescript && "@babel/preset-typescript",
 			react && "@babel/preset-react"
 		].filter(Boolean),
@@ -13,11 +21,7 @@ module.exports = function (api, opts) {
 			"@babel/plugin-proposal-object-rest-spread",
 			["@babel/plugin-proposal-decorators", { "legacy": true }],
 			["@babel/plugin-proposal-class-properties", { "loose": true }],
-			["@babel/plugin-transform-runtime",
-				{
-					"corejs": 3
-				},
-			],
+			["@babel/plugin-transform-runtime", runtimeOpt],
 		]
 
 	}
