@@ -30,6 +30,8 @@ yarn add babel-preset-cv -D
 		"@babel/plugin-proposal-object-rest-spread",
 		["@babel/plugin-proposal-decorators", { "legacy": true }],
 		["@babel/plugin-proposal-class-properties", { "loose": true }],
+		["@babel/plugin-proposal-private-property-in-object", { "loose": true }],
+		["@babel/plugin-proposal-private-methods", { "loose": true }],
 		["@babel/plugin-transform-runtime", { "corejs": 3 }],
 	]
 }
